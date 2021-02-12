@@ -1,0 +1,46 @@
+<html>
+   <head>
+
+    <meta charset="utf-8" />
+      <title >Desafío2</title>
+
+
+   </head>
+
+   </body>
+     <h1 align="center">Ejemplo de tabla</h1>
+
+<table border="1" width="50%" align="center">
+  <tbody id="Mitabla">
+  </tbody>
+
+
+</table>
+
+
+     </body>
+     <script>
+   var filas = prompt("cuantas filas necesitas?");
+   var columnas = prompt("cuantas columnas necesitas?");
+
+
+   var tblBody = document.getElementById("Mitabla");
+
+   for (var i = 0; i < columnas; i++) {
+
+       var fila = document.createElement("tr");
+       for (var j = 0; j < filas; j++) {
+
+           var celda = document.createElement("td");
+           var textoCelda = document.createTextNode("*");
+           celda.appendChild(textoCelda);
+           fila.appendChild(celda);
+       }
+
+       tblBody.appendChild(fila);
+   }
+
+
+     </script>
+
+</html>
